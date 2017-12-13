@@ -1,0 +1,19 @@
+version: '3'
+services:
+  app:
+    image: app:02
+    build:
+      context: ./
+      dockerfile: app_2
+    ports:
+    - "4000:5000"
+    networks:
+      - app_db
+  redis:
+    image: redis
+    networks:
+      - app_db
+    volumes:
+    - /demo_data:/data
+networks:
+  app_db:
