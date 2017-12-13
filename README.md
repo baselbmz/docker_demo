@@ -54,12 +54,12 @@ docker run app:01
 docker run -p 4000:5000 app:01
 docker run -d -p 4000:5000 app:01
 docker ps
-docker logs lucid_fermi
-docker logs -f lucid_fermi
-docker exec -it lucid_fermi /bin/sh
+docker logs <container_name>
+docker logs -f <container_name>
+docker exec -it <container_name> /bin/sh
 (try ps inside, outside)
 docker ps
-docker stop lucid_fermi
+docker stop <container_name>
 docker ps
 ```
 
